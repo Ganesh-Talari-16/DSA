@@ -5,13 +5,9 @@
 #         self.next = next
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
-        """
-        Do not return anything, modify head in-place instead.
-        """
         #Edge Case
         if not head or not head.next:
             return 
-
 
         slow = head 
         fast = head
@@ -31,14 +27,21 @@ class Solution:
             current = nxt
         mid.next = None
         
-        temp1 = head
-        temp2 = prev        
-        while temp2:
-            nxt = temp1.next
-            temp1.next = temp2
-            temp1 = temp2
-            temp2 = nxt
+        #merge 
+        tempA = head
+        tempB = prev        
+        while tempA and tempB:
+            A_nxt = tempA.next
+            B_nxt = tempB.next
+
+            tempA.next = tempB
+            tempB.next = A_nxt
+
+            tempA = A_nxt
+            tempB = B_nxt
+           
             
+    
 
         
 
