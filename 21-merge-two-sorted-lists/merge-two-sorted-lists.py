@@ -15,5 +15,10 @@ class Solution:
                 current.next = list2
                 list2 = list2.next
             current = current.next
-        current.next = list1 or list2
+        # Attach remaining list if exist
+        if list1:
+            current.next = list1
+        else:
+            current.next = list2
+        #current.next = list1 or list2
         return dummy.next
