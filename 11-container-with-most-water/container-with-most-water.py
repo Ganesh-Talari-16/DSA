@@ -1,4 +1,5 @@
 class Solution:
+    # Ganesh
     def maxArea(self, height: List[int]) -> int:
         left , right = 0, len(height) - 1
         max_water = 0
