@@ -1,7 +1,7 @@
 class StockSpanner:
 
     def __init__(self):
-        self.stack = []  # pair (price,span)  i.e [(100,1), (80,1)]
+        self.stack = []  # pair (price,span)  i.e [(100,1), (80,1), (60,1), (70,1), (60,1), (75,1), (85,1)]
 
         
 
